@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  button{
+    background-color: black;
+    border-radius: 5px;
+    margin:5px;
+    color:white;
+  }
+  </style>
+  <script>
+  function c()
+  {
+    var i=0
+    for( i=1;i<=100;i++)
+    {
+  var btn = document.createElement("BUTTON");        // Create a <button> element
+var t = document.createTextNode(i);       // Create a text node
+btn.appendChild(t);
+btn.id=i;
+btn.className="w3-btn w3-black w3-text-white";
+//document.getElementById(""+i).style.color="black";                   // Append the text to <button>
+document.getElementById('b').appendChild(btn);
+}
+}
+function cr()
+{
+  var name[]
+}
+  </script>
+</head>
+<body>
+<div id="b" class="w3-container w3-margin">
+  <input type="text" id="get"><br>
+</div>
+<button onclick="cr()">Click</button>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!--Student login page-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aits online portal-student login page</title>
+  <script type="text/javascript" src="/ui/main.js"></script>
+  <link rel="stylesheet" href="/ui/style.css">
+  <style>
+  body {
+background-image: url("image.gif");
+}
+input,select{border-radius: 5px;}
+input,select{margin: 5px;}
+
+
+  </style>
+</head>
+<body onload="setTimerCounter()">
+  <center>
+  <img src="logo.jpg" >
+  </center>
+  <div class="w3-container w3-grey w3-margin w3-round-large">
+    <div class="w3-left w3-margin-right w3-rightbar w3-border-black">
+      <h4><b>Login</b></h4>
+      <form>
+        <label>Roll Number</label><br>
+        <input type="text" id="student_roll"><br>
+        <label>Name</label><br>
+        <input type="text" id="student_name"><br>
+        <label>Branch Year Section</label><br>
+        <select id="student_branch">
+          <option value="CSE">CSE</option>
+          <option value="IT">IT</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+          <option value="MEC">MEC</option>
+          <option value="CE">CE</option>
+        </select>
+        <!--<label>Year</label>-->
+        <select id="student_year">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <!--<label>SECTION</label>-->
+        <select id="student_section">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select><br>
+        <label>Enter question paper code</label><br>
+        <input type="text" id="key"><br>
+      </form>
+      <br>
+      <center><button type="submit" onclick="student_login()" class="w3-btn w3-round-large w3-black">Take test</button><center>
+    </div>
+    <div class="w3-left">
+      <h4><b>Instructions to the candidate</b></h4>
+      <p>1.Please make sure that you enter correct details during login.<br>
+        2.After choosing options for current question click on next button so that options for next question will be displayed.<br>
+        3.You can track the status of questions in the status area.<br>
+        <button class="w3-btn w3-green w3-round-large">14</button>-answered
+        <button class="w3-btn w3-red  w3-round-large">25</button>-Visited but not answered
+        <!--<button class="w3-btn w3-yellow  w3-round-large">13</button>-Answered but flagged-->
+        <button class="w3-btn w3-black  w3-round-large">10</button>-Not yet visited.<br>
+        4.You can directly answer  a particular question by clicking on the respective question number in the status area.<br>
+        5.You can submit the test only after one fourth of the total time is completed.<br>
+        6.Keep an eye on the timer and complete the test in time.<br>
+        <p class="w3-center w3-large">All the best!!!<p>
+      </p>
+    </div>
+  </div>
+  <p class="w3-center w3-text-grey"><b>Designed by chandra mouli.</b></p>
+</body>
+</html>

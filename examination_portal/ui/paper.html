@@ -1,0 +1,112 @@
+<!--HTML page for questionpaper making-->
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="/ui/main.js"></script>
+    <link rel="stylesheet" href="/ui/style.css">
+    <style>
+    body {
+background-image: url("image.gif");
+}
+label{
+  color: white;
+}
+input{color:grey;}
+    </style>
+</head>
+<body class="w3-margin">
+  <center>
+  <img src="logo.jpg" >
+</center>
+  <h1 class="w3-center w3-text-white">Test details</h1>
+  <div class="w3-center w3-container">
+  <!--<form  enctype="multipart/form-data" class="w3-margin">-->
+  <label>Name of the test</label><br>
+  <input class="w3-round-large" type="text" id="test_name" required><br>
+  <label>Total number of questions</label><br>
+<input class="w3-round-large" type="number" id="noOfQuestions"><br>
+  <label>Duration of exam(minutes)</label><br>
+  <input class="w3-round-large" type="number" id="testTime"><br>
+<!--  <label>Target students</label><br>
+  <label>Year</label>
+  <select class="w3-round-large" id="target_year">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+  </select>
+  <label>Branch</label>
+  <select class="w3-round-large" id="target_branch">
+<option>CSE</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>MEC</option>
+<option>CE</option>
+  </select>-->
+<label>Enter secret key</label>
+<br>
+<input type="text" id="secretkey" class="w3-round-large"><br>
+  <!--<label>Number of question paper sets</label>
+  <input type="radio" name="no_of_sets" onclick="setUpload(1)"><label>1</label>
+  <input type="radio" name="no_of_sets"  onclick="setUpload(2)"><label>2</label>
+  <input type="radio" name="no_of_sets"  onclick="setUpload(3)"><label>3</label>
+  <input type="radio" name="no_of_sets"  onclick="setUpload(4)"><label>4</label>
+  <div id="s1" style="display:none" class="w3-margin">
+    <label>Choose pdf for set A</label><br>
+    <input type="file" id="set1"><br>
+    <label>Enter key for set A</label><br>
+    <input class="w3-round-large" type="text" id="set1Key"><br>
+  </div>
+  <div id="s2" style="display:none" class="w3-margin">
+    <label>Choose pdf for set A</label><br>
+    <input type="file" id="set1"><br>
+    <label>Choose pdf for set B</label><br>
+    <input type="file" id="set2"><br>
+    <label>Enter key for set A</label><br>
+    <textarea class="w3-round-large" type="text" id="set1Key">
+    </textarea>
+    <label>Enter key for set B</label><br>
+    <textarea class="w3-round-large" type="text" id="set2Key">
+    </textarea>
+  </div>
+  <div id="s3" style="display:none" class="w3-margin">
+    <label>Choose pdf for set A</label><br>
+    <input type="file" id="set1"><br>
+    <label>Choose pdf for set B</label><br>
+    <input type="file" id="set2"><br>
+    <label>Choose pdf for set C</label><br>
+    <input type="file" id="set3"><br>
+    <label>Enter key for set A</label><br>
+    <input class="w3-round-large" type="text" id="set1Key"><br>
+    <label>Enter key for set B</label><br>
+    <input class="w3-round-large" type="text" id="set2Key"><br>
+    <label>Enter key for set C</label><br>
+    <input class="w3-round-large" type="text" id="set3Key"><br>
+  </div>
+  <div id="s4" style="display:none" class="w3-margin">
+    <label>Choose pdf for set A</label><br>
+    <input type="file" id="set1"><br>
+    <label>Choose pdf for set B</label><br>
+    <input type="file" id="set2"><br>
+    <label>Choose pdf for set C</label><br>
+    <input type="file" id="set3"><br>
+    <label>Choose pdf for set D</label><br>
+    <input type="file" id="set4"><br>
+    <label>Enter key for set A</label><br>
+    <input class="w3-round-large" type="text" id="set1Key"><br>
+    <label>Enter key for set B</label><br>
+    <input class="w3-round-large" type="text" id="set2Key"><br>
+    <label>Enter key for set C</label><br>
+    <input class="w3-round-large" type="text" id="set3Key"><br>
+    <label>Enter key for set D</label><br>
+    <input class="w3-round-large" type="text" id="set4Key"><br>
+  </div>-->
+  <label>Enter key for set1</label><br>
+  <textarea rows="10" cols="100" id="key_set1"></textarea>
+  <br>
+  <label>Enter key for set2</label><br>
+  <textarea rows="10" cols="100" id="key_set2"></textarea><br>
+<button class="w3-btn w3-grey w3-round-xxlarge w3-margin" type="submit" onclick="makeQuestionPaper()" ><b>Prepare test</b></button>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!--HTML page for question paper-->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+  .w3-btn{
+    margin:5px;
+  }
+  button{border-radius: 5px;}
+  </style>
+  <script type="text/javascript" src="/ui/main.js"></script>
+  <link rel="stylesheet" href="/ui/style.css">
+
+</head>
+<body id="m" onload="getStudentData()" style="display:block">
+  <div id="instructions" style="display:none">
+    <button onclick="student_login">Start test</button>
+  </div>
+  <div id="main_paper">
+<div class="w3-top">
+  <div class="w3-bar w3-blue-gray">
+    <b>
+     <p class="w3-left" ><span class="w3-text-deep-orange">Roll no</span>:<span id="roll_number"></span></p>
+      <p class="w3-left"><span   class="w3-text-deep-orange" >Name</span>:<span id="stud_name"></span></p>
+        <p class="w3-left" ><span  class="w3-text-deep-orange">Branch</span>:<span id="stud_branch"></span></p>
+          <p class="w3-left" ><span  class="w3-text-deep-orange">Year</span>:<span id="stud_year"></span></p>
+        </b>
+
+  <p class="w3-right"><span id="hour">hh</span>:<span id="min">mm</span>:<span id="sec">ss</span></p>
+    <p class="w3-right">Time left:</p>
+  </div>
+</div>
+<div class="w3-row" style="margin-top:50px">
+  <div class="w3-col w3-container" style="width:60%;"><embed id="pdf" src="set1.pdf" width="800" height="600" type='application/pdf'></div>
+  <div class="w3-col w3-container" style="width:40%;">
+  <div class="w3-row w3-container" style="height:20%; border-bottom:3px solid black;" >
+<p>Select option for question no:<b><span id="currentQuestion">1</span></b></p>
+    <input type="radio" name="option" value="A" id="A">A<br>
+<input type="radio" name='option'  value="B" id="B">B<br>
+<input type="radio" name='option'  value="C" id="C">C<br>
+<input type="radio" name='option'  value="D" id="D">D<br>
+<!--<button class="w3-btn w3-black w3-left" onclick="setFlag()">Flag</button>-->
+<button onclick="showNextQuestion()" class="w3-btn w3-black w3-right">Next</button>
+<button onclick="showPreviousQuestion()" class="w3-btn w3-black w3-left">prev</button>
+
+  </div>
+  <div class="w3-row w3-container" style="height:10%;overflow:scroll" id="option_buttons_first" style="display:block">
+  </div>
+  <div class="w3-row w3-container" style="height:10%;overflow:scroll" id="option_buttons_second" style="display:none">
+  </div>
+  </div>
+  <div class="w3-container w3-right">
+    <div style="display:block">
+  <button id="endtestbutton" style="disabled:true"  class="w3-btn w3-black"  onclick="endTest(0)">End test</button></div>
+</div>
+<div class="w3-container w3-left">
+<button onclick="first()" class="w3-btn w3-black">1-50</button>
+</div>
+<div class="w3-container w3-left">
+<button onclick="second()" class="w3-btn w3-black">50-100</button>
+</div>
+</div>
+</div>
+<hr/>
+<div class="w3-bottom">
+<h5 class="  w3-center">Designed with <img src="love.svg"> on AITS by  Mouli</h5>
+</div>
+</body>
+</html>

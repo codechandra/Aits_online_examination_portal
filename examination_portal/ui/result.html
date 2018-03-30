@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="/ui/main.js"></script>
+    <link rel="stylesheet" href="/ui/style.css">
+    <style>
+    body {
+background-image: url("image.gif");
+}
+</style>
+<script src="/ui/jspdf.min.js"></script>
+<script src="ui/jspdf.plugin.autotable.js"></script>
+  <script src="/ui/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <center>
+  <img src="logo.jpg" >
+  </center>
+ <div class="w3-container w3-black w3-center w3-margin" style="display:block" id="re_menu">
+<button class="w3-btn w3-teal w3-margin " onclick="onre_check()">Individual result</button>
+<button class="w3-btn w3-teal w3-margin " onclick="onre_group()">Group result</button>
+<button class="w3-btn w3-teal w3-margin " onclick="onre_sheets()">Validated answer sheets</button>
+  </div>
+  <!--<div class="w3-container w3-grey w3-center w3-margin" style="display:none" id="re_group">
+    <label>Enter question paper code</label><br>
+    <input class="w3-round-large " type="text" id="result_questionpapercode_group"><br>
+    <button onclick="result_check_group()" class="w3-btn w3-black w3-round-large w3-margin">Print</button>
+  </div>-->
+  <div class="w3-container w3-grey w3-center w3-margin" style="display:none" id="re_sheets">
+    <label>Enter question paper code</label><br>
+    <input class="w3-round-large" type="text" id="result_questionpapercode_sheets"><br>
+    <button onclick="result_check_sheets()" class="w3-btn w3-black w3-round-large w3-margin">Print</button>
+  </div>
+  <div class="w3-container w3-grey w3-center w3-margin" style="display:none" id="re_check">
+    <label>Enter roll number</label><br>
+    <input class="w3-round-large" type="text" id="result_roll"><br>
+    <label>Enter question paper code</label><br>
+    <input class="w3-round-large " type="text" id="result_questionpapercode"><br>
+    <button onclick="result_check()" class="w3-btn w3-black w3-round-large w3-margin">Check result</button>
+</div>
+<div class="w3-container w3-margin w3-grey w3-center" style="display:none" id="re_box">
+<b>  <p id="re_roll"><b></b></p></b>
+<b>  <p id="re_name"><b></b></p></b>
+  <b><p id="re_branch"><b></b></p></b>
+  <b><p id="re_year"><b></b></p></b>
+<b>  <p id="re_section"><b></b></p></b>
+  <b><p id="re_score"><b></b></p></b>
+  <button class="w3-btn w3-black" onclick="print_individualresult()">print result</button>
+</div>
+<p class="w3-text-white w3-center">Refresh the page to go back to home page</p>
+</body>
+</html>

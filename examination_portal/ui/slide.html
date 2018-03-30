@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  var images=["one.jpg","two.jpg","three.jpg"],i=0;
+  function call()
+  {
+
+    document.getElementById('show').src=images[i++%3];
+  }
+  </script>
+</head>
+<body onload="call()">
+<img src="one.jpg" id="show">
+</body>
+</html>
